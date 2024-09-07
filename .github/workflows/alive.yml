@@ -15,7 +15,7 @@ jobs:
 
     - name: Make a commit to mark activity
       run: |
-        date >> activity-log.txt
+        date > activity-log.txt
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git add activity-log.txt
