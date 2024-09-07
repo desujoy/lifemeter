@@ -1,0 +1,24 @@
+name: Keep Me Alive
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  keep-active:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Make a commit to mark activity
+      run: |
+        date >> activity-log.txt
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add activity-log.txt
+        git commit -m "Marking profile active"
+
+    - name: Push changes
+      run: git push
