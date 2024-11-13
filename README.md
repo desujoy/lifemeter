@@ -16,7 +16,7 @@ Since GitHub does not generate contribution graphs for forked repositories, youâ
 
 1. **Clone this repository locally**:
    ```bash
-   git clone https://github.com/USERNAME/keep-your-github-green.git
+   git clone https://github.com/desujoy/lifemeter
    ```
 2. **Create a new repository on GitHub** under your account.
 3. **Push the cloned repository to your new repository**:
